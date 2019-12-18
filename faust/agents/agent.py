@@ -207,7 +207,7 @@ class Agent(AgentT, Service):
         # key-type/value_type arguments only apply when a channel
         # is not set
         if schema is not None:
-            assert channel is None or isinstance(channel, str)
+            assert channel is None or isinstance(channel, str) or isinstance(channel, ChannelT)
         if key_type is not None:
             assert channel is None or isinstance(channel, str)
         self._key_type = key_type
